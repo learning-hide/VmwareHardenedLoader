@@ -13,10 +13,10 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.2
 
     - name: Build
-      run: msbuild /m /p:Configuration=Release
+      run: msbuild /m /p:Configuration=Release /p:Platform=x86
       
     - name: Upload 
       uses: actions/upload-artifact@v1.0.0
       with:
        name: Release
-       path: "VmLoader/bin/release/"
+       path: "VmLoader/x86/release/"
